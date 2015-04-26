@@ -1,8 +1,13 @@
+-- Changes from upstream, on David's advice:
+-- draw/produce merged as draw
+-- random/context merged as random
+
 SearchStrategy = {}
 
-local function SearchStrategy:example()
-   error("Implement me")
-end
+-- Convenience, probably skip
+--local function SearchStrategy:example()
+--   error("Implement me")
+--end
 
 -- Part of public API
 local function SearchStrategy:map(pack)
@@ -25,30 +30,26 @@ locasl function SearchStrategy:__or__(pack)
 end
 
 -- Unstable internal API from here down
-
-local function SearchStrategy:produce_parameter(context, parameter_value)
-   error("Implement me")
-end 
-
-local function SearchStrategy:produce_template(context, parameter_value)
-   error("Implement me")
-end
+-- produce_parameter, produce_templated: just use draw_*
 
 local function SearchStrategy:reify(template)
    error("Implement me")
 end
 
-local function SearchStrategy:draw_and_produce(context)
-   error("Implement me")
-end
+-- Convenience, probably skip
+--local function SearchStrategy:draw_and_produce(context)
+--   error("Implement me")
+--end
 
-local function SearchStrategy:draw_and_produce_from_random(random)
-   error("Implement me")
-enda
+-- Convenience, probably skip
+--local function SearchStrategy:draw_and_produce_from_random(random)
+--   error("Implement me")
+--end
 
-local function SearchStrategy:size(template)
-   error("Implement me")
-end
+-- Convenience, probably skip
+--local function SearchStrategy:size(template)
+--   error("Implement me")
+--end
 
 -- TODO: this is a crucial function
 local function SearchStrategy:draw_parameter(random)
@@ -56,7 +57,7 @@ local function SearchStrategy:draw_parameter(random)
 end
 
 -- TODO: this is a crucial function
-local function SearchStrategy:draw_template(context, parameter_value)
+local function SearchStrategy:draw_template(random, parameter_value)
    error("Implement me")
 end
 
@@ -76,5 +77,4 @@ local function SearchStrategy:basic_simplify(random, template)
    error("Implement me")
 end
 
--- TODO: is skipping the various Strategy classes in favor of simpler approach the way to go here?
 
