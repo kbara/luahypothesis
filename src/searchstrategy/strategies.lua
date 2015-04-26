@@ -108,13 +108,14 @@ local function OneOfStrategy:simplifiers(random, template)
    error("Implement me")
 end
 
-local function OneOfStrategy:to_basic(template)
-   error("Implement me")
-end
-
-local function OneOfStrategy:from_basic(data)
-   error("Implement me")
-end
+-- These can be skipped while I'm skipping databases
+--local function OneOfStrategy:to_basic(template)
+--   error("Implement me")
+--end
+--
+--local function OneOfStrategy:from_basic(data)
+--   error("Implement me")
+--end
 
 -- plus similar for:
 MappedSearchStrategy = {}
