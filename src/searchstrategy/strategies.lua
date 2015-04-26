@@ -77,4 +77,47 @@ local function SearchStrategy:basic_simplify(random, template)
    error("Implement me")
 end
 
+-- set a metatable to have this inhererit from SearchStrategy
+OneOfStrategy = {}
+
+local function OneOfStrategy:init(strategies)
+   error("Implement me")
+end
+
+local function OneOfStrategy:strictly_simpler(strategies)
+   error("Implement me")
+end
+
+local function OneOfStrategy:reify(value)
+   error("Implement me")
+end
+
+local function OneOfStrategy:draw_parameter(random)
+   error("Implement me")
+end
+
+local function OneOfStrategy:draw_template(random, pv)
+   error("Implement me")
+end
+
+local function OneOfStrategy:element_simplifier(s, simplifier)
+   error("Implement me")
+end
+
+local function OneOfStrategy:simplifiers(random, template)
+   error("Implement me")
+end
+
+local function OneOfStrategy:to_basic(template)
+   error("Implement me")
+end
+
+local function OneOfStrategy:from_basic(data)
+   error("Implement me")
+end
+
+-- plus similar for:
+MappedSearchStrategy = {}
+FilteredStrategy = {}
+FlatMappedStrategy = {}
 
