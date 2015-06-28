@@ -8,7 +8,8 @@ end
 function find(strategy, predicate)
    local foundval
    for i=1,10 do
-      local t = strategy:generate()
+      local seed = math.random()
+      local t = strategy:generate(seed)
       if predicate(t) then
          foundval = t
          break

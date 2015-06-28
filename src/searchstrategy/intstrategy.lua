@@ -3,7 +3,8 @@ module(..., package.seeall)
 IntStrategy = {}
 
 -- This will get divided into draw_parameter and draw_template
-function IntStrategy:generate()
+function IntStrategy:generate(seed)
+   math.randomseed(seed)
    return math.random(-2^31, 2^31 - 1)
 end
 
