@@ -9,9 +9,11 @@ function find(strategy, predicate)
    local foundval
    for i=1,10 do
       local seed = math.random()
-      local t = strategy:generate(seed)
-      if predicate(t) then
-         foundval = t
+      local param = strategy:draw_parameter(seed)
+      local template = strategy:draw_template(seed, param)
+      local val = strategy:reify(template)
+      if predicate(val) then
+         foundval = val
          break
       end
    end
